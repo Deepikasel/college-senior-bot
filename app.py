@@ -3,17 +3,24 @@ from src.bot import SeniorBot
 from pathlib import Path
 
 st.set_page_config(page_title="College Senior Bot", page_icon="🎓", layout="centered")
+BASE_DIR = Path(__file__).resolve().parent
+MODEL_DIR = BASE_DIR / "models"
+DATA_PATH = BASE_DIR / "data" / "college_qa.jsonl"
 
-MODEL_DIR = Path("models")
-DATA_PATH = Path("data/college_qa.jsonl")
+
+
 
 @st.cache_resource
 def get_bot():
-    if not (MODEL_DIR / "tfidf_vectorizer.joblib").exists():
-        bot = SeniorBot.build(str(DATA_PATH), str(MODEL_DIR))
-    else:
-        bot = SeniorBot.load(str(MODEL_DIR), str(DATA_PATH))
-    return bot
+    try:
+        if not (MODEL_DIR / "tfidf_vectorizer.joblib").exists():
+            return SeniorBot.build(str(DATA_PATH), str(MODEL_DIR))
+        return SeniorBot.load(str(MODEL_DIR), str(DATA_PATH))
+    except Exception as e:
+        st.error("Bot failed to load")
+        st.exception(e)
+        st.stop()
+
 
 st.title("🎓 College Senior Chatbot")
 st.caption("Sarcastic, friendly, and slightly too honest. (Lightweight retrieval-based AI)")
