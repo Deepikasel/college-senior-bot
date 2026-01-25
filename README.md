@@ -25,7 +25,7 @@ College Senior Bot is a Streamlit-based chatbot that provides senior-style guida
 
 ## 📂 Project Structure
 
-'''
+```
 college-senior-bot/
 │── app.py
 │── requirements.txt
@@ -33,24 +33,24 @@ college-senior-bot/
 │   ├── bot.py
 │   ├── retriever.py
 │── README.md
-'''
+```
 
 ---
 
 ## ▶️ Run Locally
-'''
+```
 git clone https://github.com/Deepikasel/college-senior-bot.git
 cd college-senior-bot
 pip install -r requirements.txt
 streamlit run app.py
-'''
+```
 
 ---
 
 ## Open in browser:
-'''
+```
 👉 http://localhost:8501
-'''
+```
 ---
 
 ## 🌐 Live Deployment
@@ -62,6 +62,7 @@ The project is deployed on Render and updates automatically after every GitHub p
 ## 👩‍💻 Author
 Archana Gurusamy
 Deepika S
+
 ---
 
 ## 📄 License
