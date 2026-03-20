@@ -61,9 +61,11 @@ The project is deployed on Render and updates automatically after every GitHub p
 
 ## 👩‍💻 Author
 
-[Archana Gurusamy](mailto:archanagurusamy648@gmail.com)
+*Archana Gurusamy*
+ - [Email](mailto:archanagurusamy648@gmail.com)
 
-[Deepika S](mailto:studies456@gmail.com)
+*Deepika S*
+ - [Email](mailto:studies456@gmail.com)
 
 ---
 
